@@ -49,7 +49,7 @@ function RegisterScreen() {
                     <div className="card my-5">
                         <div className="card-body cardbody-color ">
                             <div className="text-center mb-3">
-                                <img src="https://cdn.dribbble.com/users/1201194/screenshots/7197395/media/d5d300c76b56aa290f34cfc39de99c2d.gif"
+                                <img src="https://i.giphy.com/media/ohFe5JEvS5FbSdhh7k/200w.webp"
                                      className="img-fluid profile-image-pic img-thumbnail rounded-circle my-3"
                                      width="200px" alt="profile"/>
                             </div>

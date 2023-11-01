@@ -4,11 +4,10 @@
 }
 
 .profile-image-pic{
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 150px;
     object-fit: cover;
 }
-
 
 .cardbody-color{
     background-color: #ebf2fa;
@@ -17,4 +16,3 @@
 a{
     text-decoration: none;
 }
-
