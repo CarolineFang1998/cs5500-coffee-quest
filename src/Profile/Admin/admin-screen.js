@@ -9,49 +9,9 @@ import {updateAllUsers} from "../../Users/users-reducer";
 import * as userService from "../../Users/users-service";
 
 function AdminScreen() {
-    const {currentUser, users} = useSelector(state => state.users);
-    const [allUsers, setAllUsers] = useState(users);
-    const navigation = useNavigate();
-    const dispatch = useDispatch();
-
-
-    const canReviewToggle = async(user, canReview) => {
-       await updateUser({...user, canReview: canReview});
-    }
-
-    const updateUser = async (user) => {
-        await userService.updateOtherUser(user);
-        await dispatch(updateAllUsers(users.map(u => {
-           if (u._id === user._id) {
-               u = user;
-           }
-           return u;
-       })));
-    }
-
-    useEffect(() => {
-        dispatch(findAllUsersThunk());
-        setAllUsers(users);
-    }, []);
-
-    useEffect(() => {
-        setAllUsers(users);
-    }, [users]);
-
     return (
         <div className="container-fluid">
             <h1 className="display-4 mt-3" style={{ fontWeight: 'bold'}}>Admin Dashboard</h1>
-            <ul className="list-group">
-                {allUsers && allUsers.filter(user => user.role === "USER").map(user => {
-                    return (
-                        <li key={user._id} className="list-group-item m-2 text-secondary">
-                           {user.canReview && <button className="btn  btn-outline-danger float-end m-1" onClick={()=>(canReviewToggle(user, false))}>Mute</button>}
-                            {!user.canReview &&<button className="btn  btn-outline-success float-end m-1" onClick={()=>(canReviewToggle(user, true))}>Unmute</button>}
-                            <h3>{user.username} | {user.role}</h3>
-                        </li>
-                    )
-                })}
-            </ul>
         </div>
     );
 }

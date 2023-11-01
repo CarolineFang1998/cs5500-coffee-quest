@@ -33,7 +33,7 @@ function App() {
                           <Route path="/hello" element={<HelloWorld/>}/>
                           <Route path="/login" element={<LoginScreen/>}/>
                           <Route path="/profile" element={<ProfileScreen/>}/>
-                          <Route path="/profile/:uid" element={<ProfileUidScreen/>}/>
+                          {/*<Route path="/profile/:uid" element={<ProfileUidScreen/>}/>*/}
                           <Route path="/admin" element={<AdminScreen/>}/>
                           <Route path="/register" element={<RegisterScreen/>}/>
                       </Routes>
