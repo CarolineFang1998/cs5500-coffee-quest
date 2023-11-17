@@ -20,28 +20,28 @@ import CurrentUserContext from "./current-user-context";
 
 
 function App() {
-  return (
-      <Provider store={store}>
-          <CurrentUserContext>
-              <BrowserRouter>
-                  <div className="container">
-                      <Nav/>
-                      <Routes>
-                          <Route path="/" element={<HomePage/>}/>
-                          <Route path="/search/*" element={<Search/>}/>
-                          <Route path="/detail/:id" element={<Detail/>}/>
-                          <Route path="/hello" element={<HelloWorld/>}/>
-                          <Route path="/login" element={<LoginScreen/>}/>
-                          <Route path="/profile" element={<ProfileScreen/>}/>
-                          {/*<Route path="/profile/:uid" element={<ProfileUidScreen/>}/>*/}
-                          <Route path="/admin" element={<AdminScreen/>}/>
-                          <Route path="/register" element={<RegisterScreen/>}/>
-                      </Routes>
-                  </div>
-              </BrowserRouter>
-          </CurrentUserContext>
-      </Provider>
-  );
+    return (
+        <Provider store={store}>
+            <CurrentUserContext>
+                <BrowserRouter>
+                    <div className="container">
+                        <Nav/>
+                        <Routes>
+                            <Route path="/" element={<HomePage/>}/>
+                            <Route path="/search/*" element={<Search/>}/>
+                            <Route path="/detail/:id" element={<Detail/>}/>
+                            <Route path="/hello" element={<HelloWorld/>}/>
+                            <Route path="/login" element={<LoginScreen/>}/>
+                            <Route path="/profile" element={<ProfileScreen/>}/>
+                            <Route path="/profile/:uid" element={<ProfileUidScreen/>}/>
+                            <Route path="/admin" element={<AdminScreen/>}/>
+                            <Route path="/register" element={<RegisterScreen/>}/>
+                        </Routes>
+                    </div>
+                </BrowserRouter>
+            </CurrentUserContext>
+        </Provider>
+    );
 }
 
 export default App;
