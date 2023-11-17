@@ -3,8 +3,9 @@ import {useDispatch, useSelector} from "react-redux";
 import { profileThunk, logoutThunk, updateUserThunk } from "../Users/users-thunks";
 import { Link} from "react-router-dom";
 import {findFavoriteRestaurantsByUserId} from "../Users/favoriteRestaurant-service.js";
-// import {findReviewByUserId} from "../Reviews/reviews-service.js";
-// import {findDealByUserId} from "../Deals/deals-service.js";
+import {findReviewByUserId} from "../Reviews/reviews-service.js";
+import {findDealByUserId} from "../Deals/deals-service.js";
+import { findFollowedByFollowingThunk } from "./Follow/follows-thunk";
 import "./index.css";
 
 function ProfileScreen() {
@@ -25,13 +26,41 @@ function ProfileScreen() {
         setFavRestaurant(response);
     };
 
+    /* This is to display user's reviews*/
+    const [reviews, setReviews] = useState([]);
+    const fetchReviews = async () => {
+        const response = await findReviewByUserId(profile._id);
+        setReviews(response);
+    };
+
      /* This is to display user's deals*/
     const [deals, setDeals] = useState([]);
+    const fetchDeals = async () => {
+        const response = await findDealByUserId(profile._id);
+        setDeals(response);
+    };
+
+    const fetchFollowers = async () => {
+        const response = await dispatch(findFollowedByFollowingThunk(profile._id));
+        setFollowers(response.payload);
+    }
 
     const updateProfile = async () => {
        await dispatch(updateUserThunk(profile));
     };
 
+    useEffect(() => {
+        fetchProfile();
+    }, []);
+
+    useEffect(() => {
+        if (profile) {
+            fetchFollowers();
+            fetchFavoriteRestaurants();
+            fetchReviews();
+            fetchDeals();
+        }
+    }, [profile]);
 
        return (
             <>
@@ -103,6 +132,49 @@ function ProfileScreen() {
 
                    <br/>
 
+                    <div>
+                    {followers && profile && profile.role === "USER" && (
+                          <div className="row">
+                              <div className="col-4">
+                              <h2><i class="bi bi-person-plus"></i> My Following</h2>
+                              <ul className="list-group">
+                                  {followers.map((follower) => (
+                                      <li key={follower.following._id} className="list-group-item">
+                                          <Link to={`/profile/${follower.followed._id}`}>
+                                              <span className="fo-color">{follower.followed.username}</span>
+                                          </Link>
+                                      </li>
+                                  ))}
+                              </ul>
+                              </div>
+                              <br/>
+                              <div className="col-4">
+                              <h2><i class="bi bi-heart-fill text-danger me-2"></i>My Favorite Restaurants</h2>
+                              <ul className="list-group">
+                                  {favRestaurant.map((item) => (
+                                      <li className="list-group-item">
+                                          <a href={'http://localhost:3000/detail/' + item.restaurantId}>
+                                          <span className="res-font">{item.restaurantName}</span>
+                                          </a>
+                                  </li>))}
+                              </ul>
+                          </div>
+                          <br/>
+                        <div className="col-4">
+                        <h2><i class="bi bi-chat-left-heart"></i> My Reviews</h2>
+                        <ul className="list-group">
+                                {reviews.map((item) => (
+                                <li className="list-group-item text-secondary">
+                                         <span>{item.review} <i class="bi bi-chat-left-dots"></i></span>
+                                         <a href={'http://localhost:3000/detail/' + item.restaurantID}>
+                                            <span>{item.restaurantName}</span>
+                                        </a>
+                                </li>))}
+                        </ul>
+                       </div>
+                     </div>
+                    )}
+                    </div>
                     </div>
                     {deals && profile && profile.role === "OWNER" && (
                         <div className="border-top border-secondary p-4 mt-5">
