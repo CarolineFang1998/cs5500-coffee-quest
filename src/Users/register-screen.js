@@ -163,13 +163,13 @@ function RegisterScreen() {
                                                setRole(e.target.value);
                                            }}
                                     />
-                                    <label htmlFor="radio-owner" className="ms-1">Restaurant Owner</label><br/>
+                                    <label htmlFor="radio-owner" className="ms-1">Coffee Owner</label><br/>
                                 </div>
                             </div><br/>
 
                             {role === "OWNER" && (
                                 <>
-                                    <span>Find Your Restaurant: {restaurantName}</span>
+                                    <span>Find Your Coffee shop: {restaurantName}</span>
                                     <SearchOwner setRestaurantID={setRestaurantID} setRestaurantName={setRestaurantName} /> <br/>
                                 </>
                             )}

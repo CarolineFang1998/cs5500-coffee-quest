@@ -41,7 +41,7 @@ function SearchOwner({setRestaurantID, setRestaurantName}) {
                     type="search"
                     value={search}
                     onChange={(e) => setSearch(e.target.value)}
-                    placeholder={"restraunt name"}
+                    placeholder={"Coffee Shop Name"}
 
                 />
                 <input
