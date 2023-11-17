@@ -5,7 +5,7 @@ import ReviewItem from "./review-item";
 import {useParams, Link } from 'react-router-dom';
 import {findUserById} from "../Users/users-service";
 import {profileThunk} from "../Users/users-thunks";
-// import { createReviewThunk } from "../Reviews/reviews-thunks";
+import { createReviewThunk } from "../Reviews/reviews-thunks";
 import "../HomePage/index.css";
 
 const REVIEW_URL = "http://localhost:4000/api/reviews/restaurant/";
@@ -60,20 +60,20 @@ function ReviewList() {
         fetchProfile();
     }, [currentUser]);
  
-    // const submitReview = () => {
-    //     const templateReview = {
-    //         "restaurantID": id,
-    //         "restaurantName": restaurant.name,
-    //         "userID": currentUser._id,
-    //         "username": currentUser.username
-    //     }
-    //     const newReview = {
-    //         ...templateReview,
-    //         review: leaveReview
-    //     }
-    //     dispatch(createReviewThunk(newReview));
-    //     window.location.reload();
-    // };
+    const submitReview = () => {
+        const templateReview = {
+            "restaurantID": id,
+            "restaurantName": restaurant.name,
+            "userID": currentUser._id,
+            "username": currentUser.username
+        }
+        const newReview = {
+            ...templateReview,
+            review: leaveReview
+        }
+        dispatch(createReviewThunk(newReview));
+        window.location.reload();
+    };
     return (
         <>
        
@@ -88,7 +88,7 @@ function ReviewList() {
                 onChange={(event) => setLeaveReview(event.target.value)}
                 >
                 </textarea>
-                {/* <button className="btn mb-3 rounded-pill " onClick={submitReview}>Submit</button> */}
+                <button className="btn mb-3 rounded-pill " onClick={submitReview}>Submit</button>
             </div> : ""}
          <div className="m-3">
             <h1>Reviews</h1>  

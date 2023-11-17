@@ -9,8 +9,8 @@ function Detail(props) {
     return (
         <div>
             <DetailList/>
-            {/* <DealList/>
-            <ReviewList/> */}
+            <DealList/>
+            <ReviewList/>
         </div>
     );
 }

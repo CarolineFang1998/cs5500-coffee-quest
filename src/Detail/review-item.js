@@ -1,6 +1,6 @@
 import React from "react";
 import {useSelector, useDispatch} from "react-redux";
-// import { deleteReviewThunk } from "../Reviews/reviews-thunks";
+import { deleteReviewThunk } from "../Reviews/reviews-thunks";
 import Avatar from '@mui/material/Avatar';
 import Badge from '@mui/material/Badge';
 
@@ -25,10 +25,10 @@ const ReviewItem = (
 ) => {
     const { currentUser } = useSelector(state => state.users);
     const dispatch = useDispatch();
-    // const deleteReviewHandler = (_id) => {
-    //     dispatch(deleteReviewThunk(_id));
-    //     window.location.reload();
-    // }
+    const deleteReviewHandler = (_id) => {
+        dispatch(deleteReviewThunk(_id));
+        window.location.reload();
+    }
     return(
         <>
          <div class="col-md-8">
@@ -52,8 +52,8 @@ const ReviewItem = (
               </div>
         
               <p>{result.review}</p>
-              {/* {(currentUser && currentUser._id === result.userID) ? (
-              <button onClick={() => deleteReviewHandler(result._id)} className="btn btn-sm rounded-pill mb-3">Delete</button>) : ""} */}
+              {(currentUser && currentUser._id === result.userID) ? (
+              <button onClick={() => deleteReviewHandler(result._id)} className="btn btn-sm rounded-pill mb-3">Delete</button>) : ""}
            
             </div>
         </div>
