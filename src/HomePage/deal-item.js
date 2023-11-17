@@ -33,7 +33,7 @@ const DealItem = (
                         </section>
                     <section className="l-card_user">
                     <div class="l-card__userImage mt-2">
-			            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbJVp7Tm5SqzYSQCI4c12l07pzdQe5rHd1hA&usqp=CAU" alt="Naruto"  />
+			            <img src="https://m.media-amazon.com/images/I/51qztR0lW2L._AC_SX679_.jpg" alt="Naruto"  />
 		            </div>
                     <div className="l-card__userInfo mt-3">
                     <span className="card-title"> <a href={'http://localhost:3000/detail/' + result.restaurantID}>{result.restaurantName}</a></span>
