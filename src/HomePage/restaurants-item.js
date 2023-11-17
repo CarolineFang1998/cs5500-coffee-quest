@@ -2,11 +2,7 @@
 import React, {useEffect, useState} from "react";
 import '../index.css';
 import './index.css';
-// import {useParams} from "react-router-dom";
-// import {useDispatch} from "react-redux";
-// import {profileThunk} from "../Users/users-thunks";
-// import axios from "axios";
-// const REVIEW_URL = "http://localhost:4000/api/reviews/restaurant/";
+
 /*
     This component is used to display a yelp restraunt home page.
  */
@@ -24,26 +20,6 @@ const RestaurantItem = (
         }
     }
 ) => {
-//     const [comment, setComment] = useState([]);
-   
-//    restaurant.comment = comment[0];
-//     const dispatch = useDispatch();
-  
-//     useEffect(() => {
-//         const asyncData = async () => {
-//             // This is the node API url for detail restraurant informations
-//             const response = await axios(REVIEW_URL + restaurant.id);
-//             setComment(response.data);
-//             console.log(response.data);
-//             debugger;
-//         };
-//         // make sure we only run asyncData() once
-//         if(comment.length === 0){
-//             dispatch(profileThunk());
-//             asyncData();
-//         }
-//     },[]);
-
         return(
           
                     <div className="col">

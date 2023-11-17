@@ -20,11 +20,7 @@ function RestaurantList() {
             setIsRunEffect(true);
             try {
                 // This is the node API url for search restraurant informations
-<<<<<<< HEAD
-                const response = await axios(SEARCH_URL + zipcode + '/' + 'coffe');
-=======
                 const response = await axios(SEARCH_URL + zipcode + '/' + 'coffee');
->>>>>>> 0c3a413 (update homepage)
                 setRestaurants(response.data);
             } catch (e) {
                 console.log(e);
@@ -42,11 +38,7 @@ function RestaurantList() {
     return (
         <div className="">
            
-<<<<<<< HEAD
-                <h1 className="ancy mb-3 mt-3 text-center" style={{ fontWeight: 'bold' }}> Coffee nearby</h1>
-=======
                 <h1 className="ancy mb-3 mt-3 text-center" style={{ fontWeight: 'bold' }}> Coffee Shop Nearby</h1>
->>>>>>> 0c3a413 (update homepage)
                 <div class="row row-cols-1 row-cols-md-3 g-4">
                 {
                     restaurants && restaurants.map(Restaurant =>
