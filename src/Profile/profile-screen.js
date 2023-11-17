@@ -149,7 +149,7 @@ function ProfileScreen() {
                               </div>
                               <br/>
                               <div className="col-4">
-                              <h2><i class="bi bi-heart-fill text-danger me-2"></i>My Favorite Restaurants</h2>
+                              <h2><i class="bi bi-heart-fill text-danger me-2"></i>My Favorite Coffee</h2>
                               <ul className="list-group">
                                   {favRestaurant.map((item) => (
                                       <li className="list-group-item">
