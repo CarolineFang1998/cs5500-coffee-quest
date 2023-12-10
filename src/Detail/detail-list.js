@@ -5,7 +5,7 @@ import DetailItem from "./detail-item";
 import { useParams } from 'react-router-dom';
 import { favoriteRestaurant, findFavoriteRestaurantsByUserId, unfavoriteRestaurant } from "../Users/favoriteRestaurant-service";
 
-const DETAIL_URL = "http://localhost:4000/api/detail/";
+const DETAIL_URL = "https://cs5500-coffee-quest-node.onrender.com/api/detail/";
 
 
 function DetailList() {

@@ -6,7 +6,7 @@ import {useParams } from 'react-router-dom';
 import {profileThunk} from "../Users/users-thunks";
 import "./index.css";
 
-const ALL_DEAL_URL = "http://localhost:4000/api/deals";
+const ALL_DEAL_URL = "https://cs5500-coffee-quest-node.onrender.com/api/deals";
 
 /*
     * This component is used to display restraunt.

@@ -5,7 +5,7 @@ import {useDispatch} from "react-redux";
 import SearchItem from "./search-item";
 import {useParams, useNavigate} from 'react-router-dom';
 
-const SEARCH_URL = "http://localhost:4000/api/search/";
+const SEARCH_URL = "https://cs5500-coffee-quest-node.onrender.com/api/search/";
 /*
     * This component is used to display the search results.
     * Also support search function if user wants to search again.

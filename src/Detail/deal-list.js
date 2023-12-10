@@ -5,8 +5,8 @@ import DealItem from "./deal-item";
 import {Link, useParams } from 'react-router-dom';
 import {profileThunk} from "../Users/users-thunks";
 import { createDealThunk } from "../Deals/deals-thunks";
-const DETAIL_URL = "http://localhost:4000/api/detail/";
-const DEAL_URL = "http://localhost:4000/api/deals/restaurant/";
+const DETAIL_URL = "https://cs5500-coffee-quest-node.onrender.com/api/detail/";
+const DEAL_URL = "https://cs5500-coffee-quest-node.onrender.com/api/deals/restaurant/";
 
 /*
     * This component is used to display restraunt.

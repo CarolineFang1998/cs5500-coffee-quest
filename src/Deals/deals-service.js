@@ -1,5 +1,5 @@
 import axios from "axios";
-const DEALS_API_URL = "http://localhost:4000/api/deals";
+const DEALS_API_URL = "https://cs5500-coffee-quest-node.onrender.com/api/deals";
 
 const api = axios.create({
     withCredentials: true,

@@ -1,5 +1,5 @@
 import axios from "axios";
-const REVIEWS_API_URL = "http://localhost:4000/api/reviews";
+const REVIEWS_API_URL = "https://cs5500-coffee-quest-node.onrender.com/api/reviews";
 
 const api = axios.create({
     withCredentials: true,

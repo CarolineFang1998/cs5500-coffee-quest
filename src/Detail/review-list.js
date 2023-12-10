@@ -8,8 +8,8 @@ import {profileThunk} from "../Users/users-thunks";
 import { createReviewThunk } from "../Reviews/reviews-thunks";
 import "../HomePage/index.css";
 
-const REVIEW_URL = "http://localhost:4000/api/reviews/restaurant/";
-const DETAIL_URL = "http://localhost:4000/api/detail/";
+const REVIEW_URL = "https://cs5500-coffee-quest-node.onrender.com/api/reviews/restaurant/";
+const DETAIL_URL = "https://cs5500-coffee-quest-node.onrender.com/api/detail/";
 /*
     * This component is used to display restraunt.
  */
