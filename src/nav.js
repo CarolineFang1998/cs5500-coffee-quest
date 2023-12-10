@@ -29,7 +29,7 @@ function Nav() {
                     <a className="navbar-brand" style={{ fontWeight: 'bold' }}>Hi {currentUser.username}</a>
                     )
                 }
-                <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                <div className="" id="navbarSupportedContent">
                     <ul className="nav nav-pills card-header-pills me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
                             <Link to="/" className={`nav-link ${active === ''?'active':''}`}>Home</Link>
