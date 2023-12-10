@@ -6,8 +6,10 @@ import {useParams } from 'react-router-dom';
 import {profileThunk} from "../Users/users-thunks";
 import "./index.css";
 
-const ALL_DEAL_URL = "http://localhost:4000/api/deals";
+// const ALL_DEAL_URL = "http://localhost:4000/api/deals";
 
+const API_BASE = process.env.NODE_API_BASE;
+const ALL_DEAL_URL = `${API_BASE}/api/deals`;
 /*
     * This component is used to display restraunt.
  */

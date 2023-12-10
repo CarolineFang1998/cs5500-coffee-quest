@@ -1,5 +1,8 @@
 import axios from "axios";
-const RESTAURANTS_API_URL = "http://localhost:4000/api/detail";
+// const RESTAURANTS_API_URL = "http://localhost:4000/api/detail";
+
+const API_BASE = process.env.NODE_API_BASE;
+const RESTAURANTS_API_URL = `${API_BASE}/api/detail`;
 
 const api = axios.create({
     withCredentials: true,

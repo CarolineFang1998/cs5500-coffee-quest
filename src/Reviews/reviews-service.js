@@ -1,5 +1,8 @@
 import axios from "axios";
-const REVIEWS_API_URL = "http://localhost:4000/api/reviews";
+// const REVIEWS_API_URL = "http://localhost:4000/api/reviews";
+
+const API_BASE = process.env.NODE_API_BASE;
+const REVIEWS_API_URL = `${API_BASE}/api/reviews`;
 
 const api = axios.create({
     withCredentials: true,

@@ -1,5 +1,8 @@
 import axios from "axios";
-const DEALS_API_URL = "http://localhost:4000/api/deals";
+// const DEALS_API_URL = "http://localhost:4000/api/deals";
+
+const API_BASE = process.env.NODE_API_BASE;
+const DEALS_API_URL = `${API_BASE}/api/deals`;
 
 const api = axios.create({
     withCredentials: true,

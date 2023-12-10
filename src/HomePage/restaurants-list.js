@@ -4,7 +4,10 @@ import RestaurantItem from "./restaurants-item";
 import { useSelector } from "react-redux";
 
 
-const SEARCH_URL = "http://localhost:4000/api/search/";
+// const SEARCH_URL = "http://localhost:4000/api/search/";
+
+const API_BASE = process.env.NODE_API_BASE;
+const SEARCH_URL = `${API_BASE}/api/search`;
 
 /*
     * This component is used to display the search results. 

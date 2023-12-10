@@ -1,6 +1,9 @@
 import axios from "axios";
 
-const USERS_API_URL = "http://localhost:4000/api/users";
+// const USERS_API_URL = "http://localhost:4000/api/users";
+
+const API_BASE = process.env.NODE_API_BASE;
+const USERS_API_URL = `${API_BASE}/api/users`;
 
 export const favoriteRestaurant = async (userId, restaurantId, restaurantName) => {
     const response = await axios.post(`${USERS_API_URL}/${userId}/favoriteRestaurants/${restaurantId}/${restaurantName}`);

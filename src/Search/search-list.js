@@ -5,7 +5,11 @@ import {useDispatch} from "react-redux";
 import SearchItem from "./search-item";
 import {useParams, useNavigate} from 'react-router-dom';
 
-const SEARCH_URL = "http://localhost:4000/api/search/";
+// const SEARCH_URL = "http://localhost:4000/api/search/";
+
+const API_BASE = process.env.NODE_API_BASE;
+const SEARCH_URL = `${API_BASE}/api/search`;
+
 /*
     * This component is used to display the search results. 
     * Also support search function if user wants to search again.

@@ -8,8 +8,12 @@ import {profileThunk} from "../Users/users-thunks";
 import { createReviewThunk } from "../Reviews/reviews-thunks";
 import "../HomePage/index.css";
 
-const REVIEW_URL = "http://localhost:4000/api/reviews/restaurant/";
-const DETAIL_URL = "http://localhost:4000/api/detail/";
+// const REVIEW_URL = "http://localhost:4000/api/reviews/restaurant/";
+// const DETAIL_URL = "http://localhost:4000/api/detail/";
+
+const API_BASE = process.env.NODE_API_BASE;
+const REVIEW_URL = `${API_BASE}/api/reviews/restaurant/`;
+const DETAIL_URL = `${API_BASE}/api/detail/`;
 /*
     * This component is used to display restraunt.
  */

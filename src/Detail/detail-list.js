@@ -5,8 +5,10 @@ import DetailItem from "./detail-item";
 import { useParams } from 'react-router-dom';
 import { favoriteRestaurant, findFavoriteRestaurantsByUserId, unfavoriteRestaurant } from "../Users/favoriteRestaurant-service";
 
-const DETAIL_URL = "http://localhost:4000/api/detail/";
+// const DETAIL_URL = "http://localhost:4000/api/detail/";
 
+const API_BASE = process.env.NODE_API_BASE;
+const DETAIL_URL = `${API_BASE}/api/detail`;
 
 function DetailList() {
     const { id } = useParams();
