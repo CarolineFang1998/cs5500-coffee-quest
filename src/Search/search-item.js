@@ -16,7 +16,7 @@ const SearchItem = (
 ) => {
         return(
                 <div className="col mt-2">
-                    <a  href={'http://localhost:3000/detail/' + result.id}>
+                    <a  href={'https://yuhan-caroline-fang.netlify.app/detail/' + result.id}>
                         <img className="" src={result.image_url} width={300} height={300}/>
                         <h5 className=""> Name: {result.name}</h5>
                         <div> Phone: {result.phone}</div>
