@@ -4,7 +4,7 @@ import RestaurantItem from "./restaurants-item";
 import { useSelector } from "react-redux";
 
 
-const SEARCH_URL = "https://cs5500-coffee-quest-node.onrender.com/search/";
+const SEARCH_URL = "https://cs5500-coffee-quest-node.onrender.com/search/api/";
 
 /*
     * This component is used to display the search results. 
