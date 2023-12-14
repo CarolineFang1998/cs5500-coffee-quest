@@ -57,10 +57,12 @@ function Nav() {
                         )}
                         {currentUser && (
                             <li className="nav-item">
-                                <button className="btn btn-outline-danger nav-link" type="button" onClick={() => {
+                                <button className="btn nav-link logout-button" type="button" onClick={() => {
                                     dispatch(logoutThunk());
                                     navigate("/");
-                                }}>Logout</button>
+                                }}>
+                                    Logout
+                                </button>
                             </li>
                         )}
                     </ul>

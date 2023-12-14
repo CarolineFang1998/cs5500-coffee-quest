@@ -8,5 +8,16 @@
 }
 
 .active{
-    background-color: #97d2e5 !important;
+    background-color: #bde8f3 !important;
+}
+
+.nav-item .logout-button {
+    color: #f80606; /* Color for the text */
+    background-color: #cecece; /* Transparent background */
+    border-width: 2px; /* Border width */
+}
+
+.nav-item .logout-button:hover {
+    color: #ffffff; /* Color of text on hover */
+    background-color: #f80606; /* Background color on hover */
 }
