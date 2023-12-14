@@ -24,12 +24,12 @@ const RestaurantItem = (
           
                     <div className="col">
                     <div className="card rounded border-white h-100">
-                    <a  href={'http://localhost:3000/detail/' + restaurant.id}>
+                    <a  href={'https://yuhan-caroline-fang.netlify.app/detail/' + restaurant.id}>
                     <img src={restaurant.image_url} class="card-img-top rounded"
                         alt="Hollywood Sign on The Hill" />
                         </a>
                     <div className="card-body h-100">
-                        <h5 className="card-title"> <a href={'http://localhost:3000/detail/' + restaurant.id}>{restaurant.name}</a></h5>
+                        <h5 className="card-title"> <a href={'https://yuhan-caroline-fang.netlify.app/detail/' + restaurant.id}>{restaurant.name}</a></h5>
                         <p className="card-text text-secondary">
                         <i className="bi bi-cash-coin pe-2"></i> {restaurant.price} 
                         </p>

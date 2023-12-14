@@ -109,7 +109,7 @@ function ProfileUidScreen() {
                        <ul className="list-group rounded-10">
                            {favRestaurant.map((item) => (
                                <li className="list-group-item">
-                                   <a href={'http://localhost:3000/detail/' + item.restaurantId}>
+                                   <a href={'https://yuhan-caroline-fang.netlify.app/detail/' + item.restaurantId}>
                                    <span className="res-font">{item.restaurantName}</span>
                                    </a>
                            </li>))}

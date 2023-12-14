@@ -37,13 +37,13 @@ const ReviewItem = (
             <div class="media-body u-shadow-v18 g-bg-secondary g-pa-30">
 
               <div class="g-mb-15">
-              <a href={'http://localhost:3000/profile/' + result.userID}>
+              <a href={'https://yuhan-caroline-fang.netlify.app/profile/' + result.userID}>
                 
                <Avatar id="avatar" sx={{ bgcolor: "#efce6a",  width: 60, height: 60 }}>{result.username.charAt(0)}</Avatar>
                 </a>
-                {currentUser && currentUser._id === result.userID ? ( <a href='http://localhost:3000/profile/'>
+                {currentUser && currentUser._id === result.userID ? ( <a href='https://yuhan-caroline-fang.netlify.app/profile/'>
                 <h5 class="g-color-gray-dark-v1 mb-0">{result.username}</h5>
-                </a>) : <a href={'http://localhost:3000/profile/' + result.userID}>
+                </a>) : <a href={'https://yuhan-caroline-fang.netlify.app/profile/' + result.userID}>
                 <h5 class="g-color-gray-dark-v1 mb-0">{result.username}</h5>
                 </a>}
                 

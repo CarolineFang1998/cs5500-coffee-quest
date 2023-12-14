@@ -36,7 +36,7 @@ const DealItem = (
 			            <img src="https://m.media-amazon.com/images/I/51qztR0lW2L._AC_SX679_.jpg" alt="Naruto"  />
 		            </div>
                     <div className="l-card__userInfo mt-3">
-                    <span className="card-title"> <a href={'http://localhost:3000/detail/' + result.restaurantID}>{result.restaurantName}</a></span>
+                    <span className="card-title"> <a href={'https://yuhan-caroline-fang.netlify.app/detail/' + result.restaurantID}>{result.restaurantName}</a></span>
                     <span className="card-text text-secondary">
                     <i class="bi bi-geo-alt"></i> {result.restaurantLocation} 
                     </span>

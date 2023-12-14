@@ -153,7 +153,7 @@ function ProfileScreen() {
                               <ul className="list-group">
                                   {favRestaurant.map((item) => (
                                       <li className="list-group-item">
-                                          <a href={'http://localhost:3000/detail/' + item.restaurantId}>
+                                          <a href={'https://yuhan-caroline-fang.netlify.app/detail/' + item.restaurantId}>
                                           <span className="res-font">{item.restaurantName}</span>
                                           </a>
                                   </li>))}
@@ -166,7 +166,7 @@ function ProfileScreen() {
                                 {reviews.map((item) => (
                                 <li className="list-group-item text-secondary">
                                          <span>{item.review} <i class="bi bi-chat-left-dots"></i></span>
-                                         <a href={'http://localhost:3000/detail/' + item.restaurantID}>
+                                         <a href={'https://yuhan-caroline-fang.netlify.app/detail/' + item.restaurantID}>
                                             <span>{item.restaurantName}</span>
                                         </a>
                                 </li>))}
@@ -183,7 +183,7 @@ function ProfileScreen() {
                             <ul className="list-group col-auto">
                                 {deals.map((item) => (
                                     <li className="text-info p-3">
-                                         <a href={'http://localhost:3000/detail/' + item.restaurantID}>
+                                         <a href={'https://yuhan-caroline-fang.netlify.app/detail/' + item.restaurantID}>
                                             <span className="deal-font">{item.deal}</span>
                                         </a>
                                     </li>))}

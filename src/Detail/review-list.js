@@ -92,7 +92,7 @@ function ReviewList() {
             </div> : ""}
          <div className="m-3">
             <h1>Reviews</h1>  
-            {!currentUser ? <Link to="http://localhost:3000/login">Log in to leave your reviews</Link> : ""}
+            {!currentUser ? <Link to="https://yuhan-caroline-fang.netlify.app/login">Log in to leave your reviews</Link> : ""}
            <div className="container">
               <div className="row">
               {
