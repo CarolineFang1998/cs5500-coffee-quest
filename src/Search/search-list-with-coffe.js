@@ -59,7 +59,7 @@ function SearchListWithCoffe() {
                     type="search"
                     value={search}
                     onChange={(e) => setSearch(e.target.value)}
-                    placeholder={"restraunt name"}
+                    placeholder={"coffee shop name"}
                 />
                 <input
                     className={"form-control"}
